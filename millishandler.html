@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            <Label>Time:</Label>
+            <input type="date" id="time">
+        </div>
+        <div>
+            <Label>Millis:</Label>
+            <input type="text" id="millis">
+        </div>
+        <div>
+            <button onclick="return setMillis()">get Millis</button>
+            <button onclick="return setTime()">get Time</button>
+        </div>
+    </div>    
+
+    <script>
+        
+        var time = document.querySelector("#time");
+        var millis = document.querySelector("#millis");
+
+        function setMillis(){
+            millis.value = getMillis(time.value);
+        }
+        function setTime(){
+            time.value = getDate(millis.value);
+        }
+        function getMillis(dateValue){
+            return  new Date(dateValue).getTime(); 
+        }
+        function getDate(s){
+            s = parseFloat(s);
+            let date = new Date(s);
+            return date.toISOString().substring(0,10);
+        }
+    </script>
+</body>
+</html>
