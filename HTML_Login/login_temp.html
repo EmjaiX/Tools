@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --navBarBackgroundColor: #4e4e4e
+            --navBarForegroundColor: #bebebe
+            --mainFormHeaderBackgroundColor: #bebebe
+            --mainFormHeaderForegroundColor: #bebebe
+        }
+        body {
+            display: flex;
+            margin: 0;
+            flex-direction: column;
+        }
+        body > *{
+            margin: auto;
+        }
+        .navBar{
+            background-color: var(--navBarBackgroundColor);
+            /* color: var(--navBarForegroundColor); */
+            width: 100%;
+            height: 5vh;
+            min-height: 40px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+        .navBar #home{}
+        .navBar .search{
+            width: 15vw;
+            min-width: 50px;
+        }
+        .navBar .controls{}
+
+        .mainForm{
+            display: flex;
+            flex-direction: column;
+            width: 20vw;
+            min-width: 100px;
+        }
+        .mainForm .header {
+            width: 100%;
+        }
+        .mainForm .form {}
+        .mainForm .form input {}
+        .mainForm .form button {}
+    </style>
+</head>
+<body>
+    <div class="navBar">
+        <div id="home">{{WEBSITE}}</div>
+        <div class="search"><input type="text" name="Search" id=""></div>
+        <div class="controls">{{Settings}}</div>
+    </div>
+    <div class="mainForm">
+        <div class="header">Login</div>
+        <div class="form">
+            <input type="text" name="uname" id="">
+            <input type="password" name="password" id="">
+            <button id="formSubmit">Login</button>
+            <input type="radio" name="operation" id="login" value="Login">
+            <input type="radio" name="operation" id="register" value="Register">
+        </div>
+
+    </div>
+</body>
+</html>
