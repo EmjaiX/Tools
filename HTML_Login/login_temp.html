@@ -12,9 +12,10 @@
             --mainFormHeaderForegroundColor: #bebebe;
         }
         body {
-            display: flex;
             margin: 0;
             flex-direction: column;
+            height: 100vh;
+            min-height: 400px;
         }
         body > *{
             margin: auto;
@@ -35,14 +36,24 @@
             flex-wrap: nowrap;
             justify-content: space-between;
         }
-        .navBar #home{}
+        .navBar #home{
+            font-size: larger;
+        }
         .navBar .search{
             width: 15vw;
             min-width: 50px;
         }
-        .navBar .controls{}
+        .navBar .controls{
+            font-size: large;
+        }
 
+        .body{
+            display: flex;
+            min-height: 200px;
+
+        }
         .mainForm{
+            margin: auto;
             display: flex;
             flex-direction: column;
             width: 20vw;
@@ -63,17 +74,18 @@
         <div id="home">{{WEBSITE}}</div>
         <div class="search"><input type="text" name="Search" id=""></div>
         <div class="controls">{{Settings}}</div>
-    </div>
+    </div><div class="body">
     <div class="mainForm">
         <div class="header">Login</div>
         <div class="form">
-            <input type="text" name="uname" id="">
-            <input type="password" name="password" id="">
+            <input type="text" name="uname" id="" placeholder="Username or Email">
+            <input type="password" name="password" id="" placeholder="Password">
+            <!-- pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" -->
             <button id="formSubmit">Login</button>
             <input type="radio" name="operation" id="login" value="Login">
             <input type="radio" name="operation" id="register" value="Register">
         </div>
-
+</div>
     </div>
 </body>
 </html>
